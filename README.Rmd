@@ -1,0 +1,38 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+Each of the R functions in `concatenate` takes one or more character vectors and
+returns a comma-separated string. (A length-one character vector.) They're for
+not repeating yourself when producing human-friendly messages whose elements
+aren't known in advance.
+
+```{r, knitr-options, echo = FALSE}
+# rmarkdown::render("README.Rmd")
+knitr::opts_chunk$set(
+  echo = TRUE,
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-",
+  cache = FALSE)
+library(concatenate)
+```
+
+`cc_and(...)` is like `paste(x, sep = ",")` but it inserts "and" between the last two
+elements.
+```{r}
+cc_and("this", "that", "the other")
+```
+
+`cc_or(...)` works the same way.
+```{r}
+cc_or("one way", "another")
+```
+
+`%+%` is for pasting a bit of readable text without typing `paste`.
+```{r}
+x <- "important value"
+x %+% "!"
+```
