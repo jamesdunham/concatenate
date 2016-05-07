@@ -3,11 +3,14 @@ output:
   md_document:
     variant: markdown_github
 ---
+[![Build Status](https://travis-ci.org/jamesdunham/concatenate.svg?branch=master)](https://travis-ci.org/jamesdunham/concatenate)
 
 Each function in concatenate returns a comma-separated string. (A length-one
 character vector.) They can be used to construct human-friendly messages whose
 elements aren't known in advance, like  calls to `message`, `warning` or `stop`,
 from clean code.
+
+## Basics
 
 ```{r, knitr-options, echo = FALSE}
 # rmarkdown::render("README.Rmd")
@@ -48,8 +51,14 @@ cn(chickwts[1, ], singular, plural)
 cn_and(chickwts[1:3, 1, drop = FALSE], singular, plural)
 ```
 
-The `cc` functions have shorthand aliases for binary input.
+The `cc` functions are also available as binary infix operators.
 ```{r}
 x <- "important value"
 x %+% "!"
+```
+
+## Install
+
+```
+devtools::install_github('jamesdunham/concatenate')
 ```

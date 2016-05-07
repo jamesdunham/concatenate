@@ -1,4 +1,9 @@
+[![Build Status](https://travis-ci.org/jamesdunham/concatenate.svg?branch=master)](https://travis-ci.org/jamesdunham/concatenate)
+
 Each function in concatenate returns a comma-separated string. (A length-one character vector.) They can be used to construct human-friendly messages whose elements aren't known in advance, like calls to `message`, `warning` or `stop`, from clean code.
+
+Basics
+------
 
 The workhorse function in concatenate is `cc`.
 
@@ -35,10 +40,15 @@ cn_and(chickwts[1:3, 1, drop = FALSE], singular, plural)
 #> [1] "3 rows whose values are 179, 160 and 136"
 ```
 
-The `cc` functions have shorthand aliases for binary input.
+The `cc` functions are also available as binary infix operators.
 
 ``` r
 x <- "important value"
 x %+% "!"
 #> [1] "important value!"
 ```
+
+Install
+-------
+
+    devtools::install_github('jamesdunham/concatenate')
