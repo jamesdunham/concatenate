@@ -6,10 +6,10 @@
 \alias{concatenate-package}
 \title{concatenate: Comma Concatenation}
 \description{
-Each simple function in concatenate returns a comma-separated string. (A
-length-one character vector.) These functions help avoid repetitive code,
-especially when producing human-friendly messages whose elements aren't known
-in advance.
+Each function in concatenate returns a comma-separated string. (A length-one
+character vector.) They can be used to construct human-friendly messages
+whose elements aren't known in advance, like  calls to \code{message},
+\code{warning} or \code{stop}, from clean code.
 }
 \details{
 The workhorse function is \code{\link{cc}}. \code{\link{cn}} combines it with
