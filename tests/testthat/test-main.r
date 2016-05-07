@@ -6,6 +6,12 @@ test_that('comma works', {
   expect_equal(cc(list("A", "B"), "C"), c("A, B, C"))
 })
 
+test_that("data.frame method minimally works", {
+  expect_equal(cc(warpbreaks[1, ]), "26, A, L")
+  expect_equal(cc(warpbreaks[1:2, ]), "26, A, L, 30, A, L")
+  expect_equal(cc(warpbreaks[1:2, "wool"]), "A, A")
+})
+
 context("and basics")
 
 test_that("and works", {
