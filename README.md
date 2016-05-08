@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/jamesdunham/concatenate.svg?branch=master)](https://travis-ci.org/jamesdunham/concatenate)
+[![Build Status](https://travis-ci.org/jamesdunham/concatenate.svg?branch=master)](https://travis-ci.org/jamesdunham/concatenate) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/concatenate)](https://cran.r-project.org/package=concatenate)
 
 Each function in concatenate returns a comma-separated string. (A length-one character vector.) They can be used to construct human-friendly messages whose elements aren't known in advance, like calls to `message`, `warning` or `stop`, from clean code.
 
@@ -51,4 +51,10 @@ x %+% "!"
 Install
 -------
 
-    devtools::install_github('jamesdunham/concatenate')
+concatenate is available [via CRAN](https://cran.r-project.org/package=concatenate).
+
+    install.packages("concatenate")
+
+Or, get it from GitHub.
+
+    devtools::install_github("jamesdunham/concatenate")

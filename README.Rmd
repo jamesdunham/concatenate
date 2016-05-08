@@ -4,6 +4,7 @@ output:
     variant: markdown_github
 ---
 [![Build Status](https://travis-ci.org/jamesdunham/concatenate.svg?branch=master)](https://travis-ci.org/jamesdunham/concatenate)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/concatenate)](https://cran.r-project.org/package=concatenate)
 
 Each function in concatenate returns a comma-separated string. (A length-one
 character vector.) They can be used to construct human-friendly messages whose
@@ -59,6 +60,13 @@ x %+% "!"
 
 ## Install
 
+concatenate is available
+[via CRAN](https://cran.r-project.org/package=concatenate).
 ```
-devtools::install_github('jamesdunham/concatenate')
+install.packages("concatenate")
+```
+
+Or, get it from GitHub.
+```
+devtools::install_github("jamesdunham/concatenate")
 ```
