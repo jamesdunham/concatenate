@@ -23,10 +23,10 @@ cc_or("one way", "another")
 
 `cn` and its derivatives combine these functions with `sprintf`-like substitution and the grammatical number awareness of `ngettext`.
 
-Two substitions are made ‘sprintf’-style:
+Two substitions are made `sprintf`-style:
 
--   "‘%c’": the comma-concatenated values of the object, as in ‘cc’
--   "‘%n’": the number of the object
+-   "`%c`": the comma-concatenated values of the object, as in `cc`
+-   "`%n`": the number of the object
 
 Like `ngettext`, the `cn*` functions return different strings depending on the number of the object.
 
