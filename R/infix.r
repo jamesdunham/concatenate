@@ -1,8 +1,8 @@
 #' Binary Infix Concatenation
 #'
 #' \describe{
-#' \item{\code{\%+\%}:}{binary infix operator for strings.}
-#' \item{\code{\% + \%}:}{like \code{\%+\%} but with a space between its
+#' \item{\code{\%c\%}:}{binary infix operator for strings.}
+#' \item{\code{\% c \%}:}{like \code{\%c\%} but with a space between its
 #' inputs.}
 #' \item{\code{\%,\%}, \code{\%or\%}, \code{\%and\%}:}{infix versions of
 #'       \code{\link{cc}}, \code{\link{cc_or}}, \code{\link{cc_and}}.}
@@ -10,21 +10,21 @@
 #' @param x,y Character vectors.
 #' @examples
 #' v <- "important value"
-#' v %+% "!"
+#' v %c% "!"
 #'
-#' message("Two" % + % "words")
+#' message("Two" % c % "words")
 #' @name infix
 NULL
 
 #' @rdname infix
 #' @export
-`%+%` <- function(x, y) {
+`%c%` <- function(x, y) {
   paste0(x, y)
 }
 
 #' @rdname infix
 #' @export
-`% + %` <- function(x, y) {
+`% c %` <- function(x, y) {
   paste(x, y)
 }
 
